@@ -1,0 +1,19 @@
+# this line tells python to import an argument
+from sys import argv
+
+# this line id the script to be used and file name when entering it into the terminal
+script, filename = argv
+
+#this is telling the program to open the a file "named X"
+txt = open(filename)
+
+# this outputs the statement
+print "Here's your file {0}:".format(filename)
+print txt.read()
+
+print "Type the filename again:"
+file_again = raw_input("> ")
+
+txt_again = open(file_again)
+
+print txt_again.read()
